@@ -4,13 +4,15 @@ Nodejs API server starter project
 
 ## Tech
 
-- Express
-- JWT
+- Node.js
 - MongoDB
+- Express
+- Mongoose
+- JWT
 
 ## Useful commands
 
-Run development server
+Run development server `nodemon`
 
 ```
 npm run dev
