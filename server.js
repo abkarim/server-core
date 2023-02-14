@@ -1,10 +1,15 @@
 const dotenv = require("dotenv");
+const mongoose = require("mongoose");
 dotenv.config();
 
 const app = require("./app/app");
 
-const port = process.env.port || 3000;
+mongoose.set("strictQuery", true);
+mongoose.connect(process.env.mongodb_connection_url, () =>
+  console.log("Database connected")
+);
 
-app.listen(port, () => {
-  console.log(`Listening app on ${port}`);
+const PORT = process.env.port;
+app.listen(PORT, () => {
+  console.log(`Listening app on ${PORT}`);
 });
